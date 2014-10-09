@@ -5,10 +5,11 @@ Angular.UnitTestDemo
 
 A small demo project for AngularJS client side unit test by using jasmine, karma, PhantomJS and integrated with Travis-ci.
 
+Before you run the test please make sure you have Node.js installed. Download here: http://nodejs.org.<br>
+In command line window go to the project folder, then run the below command to install the npm packages:
+
 ```
 npm install -g karma-cli
-npm install -g phantomjs
-npm install karma-phantomjs-launcher –save-dev
 ```
 
 #### Run the tests
