@@ -1,0 +1,16 @@
+{
+  "name": "Angular.UnitTestDemo",
+  "description": "Angular.UnitTestDemo",
+  "author": "Stephen Zeng <zeng.stephen@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "~0.10",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*"
+  },
+  "repository":"https://github.com/stephenzeng/Angular.UnitTestDemo.git",
+    "scripts": {
+    "test": "karma start --single-run --no-auto-watch"
+  }
+}
