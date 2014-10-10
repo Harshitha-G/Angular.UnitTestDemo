@@ -13,6 +13,6 @@
     },
     "repository": "https://github.com/stephenzeng/Angular.UnitTestDemo.git",
     "scripts": {
-        "test": "karma start --single-run --no-auto-watch"
+        "test": "karma start --single-run --browsers PhantomJS"
     }
 }
