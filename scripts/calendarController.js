@@ -5,6 +5,7 @@
 
 angular.module('myApp').controller('CalendarController', function ($scope, $log) {
     var weeks = [[],[],[],[],[],[]];
+    $scope.today = new Date().toJSON();
     $scope.currentDate = new Date();
 
     $scope.getCalendarDates = function () {
