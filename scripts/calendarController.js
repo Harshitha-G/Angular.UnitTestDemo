@@ -5,7 +5,7 @@
 
 angular.module('myApp').controller('CalendarController', function ($scope, $log) {
     var weeks = [[],[],[],[],[],[]];
-    $scope.today = new Date().toJSON();
+    $scope.today = new Date();
     $scope.currentDate = new Date();
 
     $scope.getCalendarDates = function () {
@@ -32,6 +32,10 @@ angular.module('myApp').controller('CalendarController', function ($scope, $log)
 
     $scope.setToPreviousMonth = function(){
         calendarMonth --;
+    }
+
+    $scope.isToday = function (date){
+        return new Date(date).toLocaleDateString() == $scope.today.toLocaleDateString();
     }
 
     var getFirstCalendarDate = function (year, month) {

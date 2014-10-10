@@ -24,12 +24,12 @@
             </thead>
             <tbody>
             <tr ng-repeat="week in getCalendarDates(2014,10)">
-                <td ng-repeat="date in week" ng-class="{'calendar-today': date==today}">
+                <td ng-repeat="date in week" ng-class="{'calendar-today': isToday(date)}">
                     <div>
                     <span style="font-size: 200%;font-weight: bold;">{{date | date:'d'}}</span>
                     <small>{{date | date:'MMM'}}</small>
                     </div>
-                    <div style="margin-top: 5px;">
+                    <div style="margin-top: 5px;" ng-hide="true">
                         <a href="#" class="label label-default calendar-event">18:30 Victoria Park Toast</a>
                         <a href="#" class="label label-info calendar-event">18:30 Victoria Park Toast</a>
                     </div>
