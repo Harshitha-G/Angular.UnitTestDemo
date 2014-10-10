@@ -4,7 +4,14 @@
 'use strict'
 
 angular.module('myApp').controller('CalendarController', function ($scope, $log) {
-    var weeks = [[],[],[],[],[],[]];
+    var weeks = [
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+    ];
     $scope.today = new Date();
     $scope.currentDate = new Date();
 
@@ -12,12 +19,12 @@ angular.module('myApp').controller('CalendarController', function ($scope, $log)
         var firstDate = getFirstCalendarDate($scope.currentDate.getFullYear(), $scope.currentDate.getMonth());
         var index = 0;
 
-        for(var i=0;i<weeks.length;i++){
-            for(var j=0;j<7;j++){
-                var days = (i*7)+j;
+        for (var i = 0; i < weeks.length; i++) {
+            for (var j = 0; j < 7; j++) {
+                var days = (i * 7) + j;
 
                 var date = new Date(firstDate);
-                date.setDate(date.getDate()+days);
+                date.setDate(date.getDate() + days);
                 //console.log(date);
                 weeks[i][j] = date.toJSON();
             }
@@ -26,15 +33,16 @@ angular.module('myApp').controller('CalendarController', function ($scope, $log)
         return weeks;
     }
 
-    $scope.setToNextMonth = function(){
-        //$scope.currentDate
+    $scope.setToNextMonth = function () {
+        console.log('setToNextMonth');
+        $scope.currentDate.setDate($scope.currentDate.getDate() + 1);
     }
 
-    $scope.setToPreviousMonth = function(){
-        calendarMonth --;
+    $scope.setToPreviousMonth = function () {
+        calendarMonth--;
     }
 
-    $scope.isToday = function (date){
+    $scope.isToday = function (date) {
         return new Date(date).toLocaleDateString() == $scope.today.toLocaleDateString();
     }
 

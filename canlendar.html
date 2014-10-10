@@ -8,6 +8,8 @@
 </head>
 <body ng-controller="CalendarController">
 <div class="site-content">
+    <button class="btn btn-default"> < </button>
+    <button class="btn btn-default" ng-click="setToNextMonth()"> > </button>
     <span>{{currentDate | date:'MMMM, yyyy'}}</span>
     <div class="table-responsive">
         <table class="table table-bordered table-calendar">
@@ -23,7 +25,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="week in getCalendarDates(2014,10)">
+            <tr ng-repeat="week in getCalendarDates()">
                 <td ng-repeat="date in week" ng-class="{'calendar-today': isToday(date)}">
                     <div>
                     <span style="font-size: 200%;font-weight: bold;">{{date | date:'d'}}</span>
