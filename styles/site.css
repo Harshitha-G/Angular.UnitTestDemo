@@ -18,7 +18,7 @@ body {
     height: 100px;
 }
 
-.calendar-event-label {
+.calendar-event {
     width: 140px;
     display: inline-block;
     white-space: nowrap;

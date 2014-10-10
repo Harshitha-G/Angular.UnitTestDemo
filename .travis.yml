@@ -10,3 +10,5 @@ before_script:
 
 notifications:
   email: false
+
+evn: PHANTOMJS_BIN=phantomjs
