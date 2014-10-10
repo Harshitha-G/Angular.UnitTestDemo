@@ -24,18 +24,13 @@
             </thead>
             <tbody>
             <tr ng-repeat="week in getCalendarDates(2014,10)">
-                <td ng-repeat="date in week" style="position: relative;">
+                <td ng-repeat="date in week">
                     <div>
                     <span style="font-size: 200%;font-weight: bold;">{{date | date:'d'}}</span>
                     <small>{{date | date:'MMM'}}</small>
                     </div>
-                    <div style="position: absolute;bottom: 0;">
-                        <a href="#" class="label label-info calendar-event">18:30 Victoria Park Toast</a>
-                        <a href="#" class="label label-info calendar-event">18:30 Victoria Park Toast</a>
-                        <a href="#" class="label label-info calendar-event">18:30 Victoria Park Toast</a>
-                        <a href="#" class="label label-info calendar-event">18:30 Victoria Park Toast</a>
-                        <a href="#" class="label label-info calendar-event">18:30 Victoria Park Toast</a>
-                        <a href="#" class="label label-info calendar-event">18:30 Victoria Park Toast</a>
+                    <div style="margin-top: 5px;">
+                        <a href="#" class="label label-default calendar-event">18:30 Victoria Park Toast</a>
                         <a href="#" class="label label-info calendar-event">18:30 Victoria Park Toast</a>
                     </div>
                 </td>

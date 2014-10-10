@@ -4,11 +4,9 @@
     "author": "Stephen Zeng <zeng.stephen@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "karma": "*",
-        "karma-chrome-launcher": "*",
-        "karma-cli": "0.0.4",
-        "karma-firefox-launcher": "*",
+        "karma": "~0.9",
         "karma-jasmine": "*",
+        "karma-cli": "0.0.4",
         "karma-phantomjs-launcher": "*"
     },
     "repository": "https://github.com/stephenzeng/Angular.UnitTestDemo.git",
