@@ -4,24 +4,37 @@
 'use strict'
 
 angular.module('myApp').controller('CalendarController', function ($scope, $log) {
+    var weeks = [[],[],[],[],[],[]];
+    $scope.currentDate = new Date();
 
-    $scope.getCalendarDates = function (year, month) {
-        var dates = [];
+    $scope.getCalendarDates = function () {
+        var firstDate = getFirstCalendarDate($scope.currentDate.getFullYear(), $scope.currentDate.getMonth());
+        var index = 0;
 
-        var firstCalendarDate = getFirstCalendarDate(year, month);
-        var lastCalendarDate = getLastCalendarDate(year, month);
-        dates.push(new Date(firstCalendarDate));
+        for(var i=0;i<weeks.length;i++){
+            for(var j=0;j<7;j++){
+                var days = (i*7)+j;
 
-        while (firstCalendarDate < lastCalendarDate) {
-            firstCalendarDate.setDate(firstCalendarDate.getDate() + 1);
-            dates.push(new Date(firstCalendarDate));
+                var date = new Date(firstDate);
+                date.setDate(date.getDate()+days);
+                //console.log(date);
+                weeks[i][j] = date.toJSON();
+            }
         }
 
-        return dates;
+        return weeks;
+    }
+
+    $scope.setToNextMonth = function(){
+        //$scope.currentDate
+    }
+
+    $scope.setToPreviousMonth = function(){
+        calendarMonth --;
     }
 
     var getFirstCalendarDate = function (year, month) {
-        var firstDate = new Date(year, month - 1, 1);
+        var firstDate = new Date(year, month, 1);
         var weekDay = firstDate.getDay();
 
         while (weekDay != 0) {
@@ -30,17 +43,5 @@ angular.module('myApp').controller('CalendarController', function ($scope, $log)
         }
 
         return firstDate;
-    }
-
-    var getLastCalendarDate = function (year, month) {
-        var lastDate = new Date(year, month, 0);
-        var weekDay = lastDate.getDay();
-
-        while (weekDay != 6) {
-            lastDate.setDate(lastDate.getDate() + 1);
-            weekDay = lastDate.getDay();
-        }
-
-        return lastDate;
     }
 });
