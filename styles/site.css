@@ -26,3 +26,7 @@ body {
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
 }
+
+.calendar-today{
+    background: #ec971f;
+}

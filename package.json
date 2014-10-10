@@ -1,16 +1,16 @@
 {
-    "name": "Angular.UnitTestDemo",
-    "description": "Angular.UnitTestDemo",
-    "author": "Stephen Zeng <zeng.stephen@gmail.com>",
-    "license": "MIT",
-    "devDependencies": {
-        "karma": "~0.9",
-        "karma-jasmine": "*",
-        "karma-cli": "0.0.4",
-        "karma-phantomjs-launcher": "*"
-    },
-    "repository": "https://github.com/stephenzeng/Angular.UnitTestDemo.git",
-    "scripts": {
-        "test": "karma start --single-run --browsers PhantomJS"
-    }
+  "name": "Angular.UnitTestDemo",
+  "description": "Angular.UnitTestDemo",
+  "author": "Stephen Zeng <zeng.stephen@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "karma": "~0.9",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "repository": "https://github.com/stephenzeng/Angular.UnitTestDemo.git",
+  "scripts": {
+    "test": "karma start --single-run --browsers PhantomJS"
+  }
 }

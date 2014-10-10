@@ -24,7 +24,7 @@
             </thead>
             <tbody>
             <tr ng-repeat="week in getCalendarDates(2014,10)">
-                <td ng-repeat="date in week">
+                <td ng-repeat="date in week" ng-class="{calendarToday: true}">
                     <div>
                     <span style="font-size: 200%;font-weight: bold;">{{date | date:'d'}}</span>
                     <small>{{date | date:'MMM'}}</small>
