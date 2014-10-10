@@ -10,6 +10,3 @@ before_script:
 
 notifications:
   email: false
-
-evn:
-  - PHANTOMJS_BIN="node_modules/karma-phantomjs-launcher/node_modules/phantomjs/lib/phantom/phantomjs.exe"

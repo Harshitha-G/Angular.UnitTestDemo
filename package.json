@@ -4,7 +4,7 @@
     "author": "Stephen Zeng <zeng.stephen@gmail.com>",
     "license": "MIT",
     "devDependencies": {
-        "karma": "~0.10",
+        "karma": "*",
         "karma-chrome-launcher": "*",
         "karma-cli": "0.0.4",
         "karma-firefox-launcher": "*",
