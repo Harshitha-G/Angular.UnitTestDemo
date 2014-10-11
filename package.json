@@ -11,6 +11,6 @@
   },
   "repository": "https://github.com/stephenzeng/Angular.UnitTestDemo.git",
   "scripts": {
-    "test": "karma start --single-run --browsers"
+    "test": "karma start karma.conf.js --single-run"
   }
 }
