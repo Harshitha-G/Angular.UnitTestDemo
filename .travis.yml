@@ -6,4 +6,4 @@ notifications:
   email: false
 
 before_install:
-  - npm install karma-phantom-launcher
+  - npm install karma-phantomjs-launcher
