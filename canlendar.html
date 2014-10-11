@@ -8,7 +8,7 @@
 </head>
 <body ng-controller="CalendarController">
 <div class="site-content">
-    <button class="btn btn-default"> < </button>
+    <button class="btn btn-default" ng-click="setToPreviousMonth()"> < </button>
     <button class="btn btn-default" ng-click="setToNextMonth()"> > </button>
     <span>{{currentDate | date:'MMMM, yyyy'}}</span>
     <div class="table-responsive">

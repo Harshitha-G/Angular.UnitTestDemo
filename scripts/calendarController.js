@@ -34,12 +34,13 @@ angular.module('myApp').controller('CalendarController', function ($scope, $log)
     }
 
     $scope.setToNextMonth = function () {
-        console.log('setToNextMonth');
-        $scope.currentDate.setDate($scope.currentDate.getDate() + 1);
+        $scope.currentDate.setMonth($scope.currentDate.getMonth() + 1);
+        console.log($scope.currentDate);
     }
 
     $scope.setToPreviousMonth = function () {
-        calendarMonth--;
+        $scope.currentDate.setMonth($scope.currentDate.getMonth() - 1);
+        console.log($scope.currentDate);
     }
 
     $scope.isToday = function (date) {
